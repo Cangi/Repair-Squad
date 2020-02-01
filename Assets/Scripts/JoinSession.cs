@@ -70,13 +70,13 @@ public class JoinSession : MonoBehaviourPunCallbacks, ILobbyCallbacks
         switch(SceneManager.GetActiveScene().name)
         {
             case "HoloLens":
-                GetComponent<PhotonView>().ViewID = 0;
-                break;
-            case "Sparky":
                 GetComponent<PhotonView>().ViewID = 1;
                 break;
-            case "Plumber":
+            case "Sparky":
                 GetComponent<PhotonView>().ViewID = 2;
+                break;
+            case "Plumber":
+                GetComponent<PhotonView>().ViewID = 3;
                 break;
         }
     }
@@ -91,10 +91,12 @@ public class JoinSession : MonoBehaviourPunCallbacks, ILobbyCallbacks
                 case "HoloLens":
                     break;
                 case "Sparky":
-                    sparkyView.ViewID = 1;
+                    sparkyView.ViewID = 2;
+                    sparkyView.TransferOwnership(newPlayer);
                     break;
                 case "Plumber":
-                    plumberView.ViewID = 2;
+                    plumberView.ViewID = 3;
+                    plumberView.TransferOwnership(newPlayer);
                     break;
             }
         }
