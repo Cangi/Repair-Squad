@@ -15,9 +15,9 @@ public class SyncCommands : MonoBehaviour, IOnEventCallback
     public GameObject target;
 
     public void CallToggleTarget()
-    { 
-
-        RaiseEventOptions raiseEventOptions = new RaiseEventOptions { Receivers = ReceiverGroup.Others};
+    {
+        Debug.Log("The call of the wild");
+        RaiseEventOptions raiseEventOptions = new RaiseEventOptions { Receivers = ReceiverGroup.All};
         SendOptions sendOptions = new SendOptions { Reliability = true };
         PhotonNetwork.RaiseEvent(0, null, raiseEventOptions, sendOptions);
     }
