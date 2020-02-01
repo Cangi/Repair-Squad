@@ -6,7 +6,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SyncCommands : MonoBehaviour
+public class SyncCommands : MonoBehaviourPun
 {
     public void OnEnable()
     {
@@ -32,14 +32,5 @@ public class SyncCommands : MonoBehaviour
         RaiseEventOptions raiseEventOptions = new RaiseEventOptions { Receivers = ReceiverGroup.All};
         SendOptions sendOptions = new SendOptions { Reliability = true };
         PhotonNetwork.RaiseEvent(0, null, raiseEventOptions, sendOptions);
-    }
-
-    [PunRPC]
-    private void ToggleTarget()
-    {
-        if (target != null)
-        {
-            target.SetActive(!target.activeSelf);
-        }
     }
 }
