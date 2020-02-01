@@ -1,6 +1,7 @@
 ﻿using ExitGames.Client.Photon;
 using Photon.Pun;
 using Photon.Realtime;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -9,12 +10,20 @@ public class SyncCommands : MonoBehaviour
 {
     public void OnEnable()
     {
-        PhotonNetwork.AddCallbackTarget(this);
+        PhotonNetwork.NetworkingClient.EventReceived += Yee;
     }
-    public void OnEvent(EventData phtonEvent)
+
+    public void OnDisable()
     {
-        Debug.Log("There is an event in the session");
+        PhotonNetwork.NetworkingClient.EventReceived -= Yee;
     }
+
+    private void Yee(EventData obj)
+    {
+        Debug.Log("It works");
+    }
+
+    
     public GameObject target;
 
     public void CallToggleTarget()
