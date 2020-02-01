@@ -20,7 +20,7 @@ public class JoinSession : MonoBehaviourPunCallbacks, ILobbyCallbacks
                 hash.Add("Type","HoloLens");
                 break;
             case "Sparky":
-                hash.Add("Type", "Sparky";
+                hash.Add("Type", "Sparky");
                 break;
             case "Plumber":
                 hash.Add("Type", "Plumber");
@@ -70,13 +70,13 @@ public class JoinSession : MonoBehaviourPunCallbacks, ILobbyCallbacks
         switch(SceneManager.GetActiveScene().name)
         {
             case "HoloLens":
-                GetComponent<PhotonView>().ViewID = 1;
+                GetComponent<PhotonView>().ViewID = 0;
                 break;
             case "Sparky":
-                GetComponent<PhotonView>().ViewID = 2;
+                GetComponent<PhotonView>().ViewID = 1;
                 break;
             case "Plumber":
-                GetComponent<PhotonView>().ViewID = 3;
+                GetComponent<PhotonView>().ViewID = 2;
                 break;
         }
     }
@@ -84,23 +84,25 @@ public class JoinSession : MonoBehaviourPunCallbacks, ILobbyCallbacks
     public override void OnPlayerEnteredRoom(Player newPlayer)
     {
         Debug.Log(newPlayer.ActorNumber + " joined the room");
-        switch(newPlayer.CustomProperties["Type"])
+        if (SceneManager.GetActiveScene().name == "HoloLens")
         {
-            case "HoloLens":
-                break;
-            case "Sparky":
-                sparkyView.ViewID = 2;
-                break;
-            case "Plumber":
-                plumberView.ViewID = 3;
-                break;
+            switch (newPlayer.CustomProperties["Type"])
+            {
+                case "HoloLens":
+                    break;
+                case "Sparky":
+                    sparkyView.ViewID = 1;
+                    break;
+                case "Plumber":
+                    plumberView.ViewID = 2;
+                    break;
+            }
         }
     }
 
     public override void OnPlayerLeftRoom(Player otherPlayer)
     {
         Debug.Log(otherPlayer.ActorNumber + " left the room");
-        photonViews.Push(PhotonNetwork.GetPhotonView(otherPlayer.ActorNumber));
     }
 
     public void OnLeftLobby()
