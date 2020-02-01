@@ -8,4 +8,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/HoloLens.unity
     guid: d71648f2ffe743045bc8fa87afecadad
+  - enabled: 1
+    path: Assets/Scenes/Plumber.unity
+    guid: 9582ded77209c9b4dab9d60918cdfa30
+  - enabled: 1
+    path: Assets/Scenes/Sparky.unity
+    guid: d3094abc1dd597a4fb65325104712984
   m_configObjects: {}

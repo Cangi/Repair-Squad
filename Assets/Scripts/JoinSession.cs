@@ -26,7 +26,8 @@ public class JoinSession : MonoBehaviourPunCallbacks, ILobbyCallbacks
                 hash.Add("Type", "Plumber");
                 break;
         }
-        
+        PhotonNetwork.LocalPlayer.SetCustomProperties(hash);
+        Debug.Log(PhotonNetwork.LocalPlayer.CustomProperties["Type"]);
         ConnectNow();
     }
 
@@ -71,9 +72,8 @@ public class JoinSession : MonoBehaviourPunCallbacks, ILobbyCallbacks
         {
             case "HoloLens":
                 GetComponent<PhotonView>().ViewID = 1;
-                sparkyView.TransferOwnership(PhotonNetwork.PhotonViews[2].OwnerActorNr);
-                plumberView.TransferOwnership(PhotonNetwork.PhotonViews[3].OwnerActorNr);
-
+                //sparkyView.TransferOwnership(PhotonNetwork.PhotonViews[1].OwnerActorNr);
+                //plumberView.TransferOwnership(PhotonNetwork.PhotonViews[2].OwnerActorNr);
                 break;
             case "Sparky":
                 GetComponent<PhotonView>().ViewID = 2;
@@ -87,6 +87,7 @@ public class JoinSession : MonoBehaviourPunCallbacks, ILobbyCallbacks
     public override void OnPlayerEnteredRoom(Player newPlayer)
     {
         Debug.Log(newPlayer.ActorNumber + " joined the room");
+        Debug.Log(newPlayer.CustomProperties["Type"]);
         if (SceneManager.GetActiveScene().name == "HoloLens")
         {
             switch (newPlayer.CustomProperties["Type"])
@@ -94,10 +95,12 @@ public class JoinSession : MonoBehaviourPunCallbacks, ILobbyCallbacks
                 case "HoloLens":
                     break;
                 case "Sparky":
+                    Debug.Log("Passed it to Sparky");
                     sparkyView.ViewID = 2;
                     sparkyView.TransferOwnership(newPlayer);
                     break;
                 case "Plumber":
+                    Debug.Log("Passed it to Plumber");
                     plumberView.ViewID = 3;
                     plumberView.TransferOwnership(newPlayer);
                     break;
