@@ -5,9 +5,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SyncCommands : MonoBehaviour, IOnEventCallback
+public class SyncCommands : MonoBehaviour
 {
-
+    public void OnEnable()
+    {
+        PhotonNetwork.AddCallbackTarget(this);
+    }
     public void OnEvent(EventData phtonEvent)
     {
         Debug.Log("There is an event in the session");
