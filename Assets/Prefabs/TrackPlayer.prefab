@@ -2418,6 +2418,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5145531539820528576}
   - component: {fileID: 9199012677548153139}
+  - component: {fileID: 3794664282186029553}
   m_Layer: 0
   m_Name: LeftController
   m_TagString: Untagged
@@ -2457,6 +2458,20 @@ MonoBehaviour:
   syncScale: 0
   sceneTransform: {fileID: 0}
   photonView: {fileID: 0}
+--- !u!114 &3794664282186029553
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3848322674948612559}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 940a8b8021a5a4140b956817b7f8d535, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  trackedHandedness: 1
+  trackedJoint: 0
 --- !u!1 &3925892693411560743
 GameObject:
   m_ObjectHideFlags: 0
@@ -4688,6 +4703,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6031402797989473074}
   - component: {fileID: 497414192055354751}
+  - component: {fileID: 8075647480216866955}
   m_Layer: 0
   m_Name: PlayerHead
   m_TagString: Untagged
@@ -4727,6 +4743,19 @@ MonoBehaviour:
   syncScale: 0
   sceneTransform: {fileID: 0}
   photonView: {fileID: 0}
+--- !u!114 &8075647480216866955
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7435273342973691668}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 792b42462a218914bb6b763afda540f1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  offsetToCamera: {x: 0, y: 0, z: 0}
 --- !u!1 &7506030441607227182
 GameObject:
   m_ObjectHideFlags: 0
@@ -5827,6 +5856,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4305728951419981103}
   - component: {fileID: 1740787025586229732}
+  - component: {fileID: 362195214283359423}
   m_Layer: 0
   m_Name: RightController
   m_TagString: Untagged
@@ -5866,6 +5896,20 @@ MonoBehaviour:
   syncScale: 0
   sceneTransform: {fileID: 0}
   photonView: {fileID: 0}
+--- !u!114 &362195214283359423
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8921300376230301374}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 940a8b8021a5a4140b956817b7f8d535, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  trackedHandedness: 2
+  trackedJoint: 0
 --- !u!1 &9032673017335857985
 GameObject:
   m_ObjectHideFlags: 0
