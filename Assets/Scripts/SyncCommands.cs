@@ -5,7 +5,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SyncCommands : MonoBehaviour
+public class SyncCommands : MonoBehaviour, IOnEventCallback
 {
 
     public void OnEvent(EventData phtonEvent)
