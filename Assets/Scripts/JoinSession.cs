@@ -71,6 +71,9 @@ public class JoinSession : MonoBehaviourPunCallbacks, ILobbyCallbacks
         {
             case "HoloLens":
                 GetComponent<PhotonView>().ViewID = 1;
+                sparkyView.TransferOwnership(PhotonNetwork.PhotonViews[2].OwnerActorNr);
+                plumberView.TransferOwnership(PhotonNetwork.PhotonViews[3].OwnerActorNr);
+
                 break;
             case "Sparky":
                 GetComponent<PhotonView>().ViewID = 2;
