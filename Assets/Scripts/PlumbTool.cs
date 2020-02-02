@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using Photon.Pun;
+using Photon.Realtime;
 using UnityEngine;
 
 public class PlumbTool : MonoBehaviour
@@ -16,7 +17,20 @@ public class PlumbTool : MonoBehaviour
         if (collision.gameObject.name == "toilet")
         {
             fixRoom++;
+        }if (collision.gameObject.name == "roomsimple")
+        {
+            Player target = null;
+            transform.localScale = transform.localScale / 4;
+            foreach (Player x in PhotonNetwork.CurrentRoom.Players.Values)
+            {
+                if (x.CustomProperties["Type"] == "Plumber")
+                {
+                    target = x;
+                } 
+            }
+            PhotonNetwork.GetPhotonView(900).TransferOwnership(target);
         }
+        
     }
     public void Update()
     {

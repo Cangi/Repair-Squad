@@ -17,6 +17,7 @@ GameObject:
   - component: {fileID: 8294375417833861496}
   - component: {fileID: 8136245158693898110}
   - component: {fileID: 6792333536960322266}
+  - component: {fileID: 4204982576409152932}
   m_Layer: 0
   m_Name: PlumbTool
   m_TagString: Untagged
@@ -246,4 +247,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6df5867588bba42dd8daee16f181484c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fixRoom: 0
+  maxToiletHits: 3
+--- !u!54 &4204982576409152932
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1000010626458870}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
