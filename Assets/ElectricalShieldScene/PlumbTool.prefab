@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 4270353705545906330}
   - component: {fileID: 8294375417833861496}
   - component: {fileID: 8136245158693898110}
+  - component: {fileID: 6792333536960322266}
   m_Layer: 0
   m_Name: PlumbTool
   m_TagString: Untagged
@@ -233,3 +234,16 @@ MonoBehaviour:
   onHoverExited:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &6792333536960322266
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1000010626458870}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6df5867588bba42dd8daee16f181484c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fixRoom: 0

@@ -101,9 +101,9 @@ Material:
     - _SrcBlend: 1
     - _TexDistortion: 0.25
     - _UVSec: 0
-    - _WaveAmp: 0.5
-    - _WaveLerp: 1
-    - _WaveSpeed: 0.5
+    - _WaveAmp: 0
+    - _WaveLerp: 0
+    - _WaveSpeed: 0
     - _WorldSpaceNrm: 0
     - _ZWrite: 1
     m_Colors:

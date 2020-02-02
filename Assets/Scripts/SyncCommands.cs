@@ -40,4 +40,10 @@ public class SyncCommands : MonoBehaviour
             }
         }
     }
+
+    [PunRPC]
+    public void ToiletFixed()
+    {
+        underwaterVar.waterRising = false;
+    }
     }
