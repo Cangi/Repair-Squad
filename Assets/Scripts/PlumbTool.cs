@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using Photon.Pun;
 using Photon.Realtime;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlumbTool : MonoBehaviour
 {
@@ -12,12 +13,17 @@ public class PlumbTool : MonoBehaviour
     private bool fixedToilet = false;
     void OnCollisionEnter(Collision collision)
     {
+        Debug.Log(collision.gameObject.name);
         int remainingHits = maxToiletHits - fixRoom;
-        Debug.Log("You have to hit the toilet " + remainingHits + "to fix it");
         if (collision.gameObject.name == "toilet")
         {
-            fixRoom++;
-        }if (collision.gameObject.name == "roomsimple")
+            fixRoom++; 
+        }
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.name == "roomsimple" && SceneManager.GetActiveScene().name == "HoloLens")
         {
             Player target = null;
             transform.localScale = transform.localScale / 4;
@@ -30,8 +36,8 @@ public class PlumbTool : MonoBehaviour
             }
             PhotonNetwork.GetPhotonView(900).TransferOwnership(target);
         }
-        
     }
+
     public void Update()
     {
         if (fixRoom >= 3 && fixedToilet == false)
