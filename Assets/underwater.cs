@@ -12,6 +12,7 @@ public class underwater : MonoBehaviour
     private Color underwaterColor;
     public bool waterRising;
     public float waterLevelMax = 1.5f;
+    public float waterLevelMin = 0;
     public float risingSpeed = 1;
     // Use this for initialization
     void Start () {
@@ -33,6 +34,11 @@ public class underwater : MonoBehaviour
                 waterHeight.position = new Vector3(waterHeight.position.x,
                     waterHeight.position.y + risingSpeed * Time.deltaTime, waterHeight.position.z);
             }
+        }
+        else if(!waterRising && waterHeight.position.y > waterLevelMin)
+        {
+            waterHeight.position = new Vector3(waterHeight.position.x,
+                waterHeight.position.y - risingSpeed * Time.deltaTime, waterHeight.position.z);
         }
         float heightWError = waterHeight.position.y + 1;
         if ((playerUnderwaterCamera.position.y < heightWError) != isUnderwater) {
