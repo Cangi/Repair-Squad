@@ -1,0 +1,166 @@
+fileFormatVersion: 2
+guid: 28d85d62c50f78843b84bde45eba18d7
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: Basket
+    100002: //RootNode
+    100004: dirty paper
+    100006: Paper01
+    100008: Paper02
+    100010: Paper03
+    100012: Paper04
+    100014: Paper05
+    100016: Paper06
+    100018: Paper07
+    100020: Paper08
+    100022: Paper09
+    400000: Basket
+    400002: //RootNode
+    400004: dirty paper
+    400006: Paper01
+    400008: Paper02
+    400010: Paper03
+    400012: Paper04
+    400014: Paper05
+    400016: Paper06
+    400018: Paper07
+    400020: Paper08
+    400022: Paper09
+    2100000: dirty paper
+    2100002: metallic 2
+    2100004: paper material
+    2300000: Basket
+    2300002: dirty paper
+    2300004: Paper01
+    2300006: Paper02
+    2300008: Paper03
+    2300010: Paper04
+    2300012: Paper05
+    2300014: Paper06
+    2300016: Paper07
+    2300018: Paper08
+    2300020: Paper09
+    3300000: Basket
+    3300002: dirty paper
+    3300004: Paper01
+    3300006: Paper02
+    3300008: Paper03
+    3300010: Paper04
+    3300012: Paper05
+    3300014: Paper06
+    3300016: Paper07
+    3300018: Paper08
+    3300020: Paper09
+    4300000: dirty paper
+    4300002: Basket
+    4300004: Paper01
+    4300006: Paper02
+    4300008: Paper03
+    4300010: Paper04
+    4300012: Paper05
+    4300014: Paper06
+    4300016: Paper07
+    4300018: Paper08
+    4300020: Paper09
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: dirty paper
+    second: {fileID: 2100000, guid: 985e16f0730d6b94492157d62ebb9d5a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: metallic 2
+    second: {fileID: 2100000, guid: 0bb14859531bb4b479366a46a410be08, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: paper material
+    second: {fileID: 2100000, guid: 2a4f51d87a3a35a48a30ea465974f9a2, type: 2}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 0
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 0.1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    importVisibility: 0
+    importBlendShapes: 1
+    importCameras: 0
+    importLights: 0
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 1
+    hasPreviousCalculatedGlobalScale: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 4
+    normalCalculationMode: 0
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 1
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
