@@ -45,6 +45,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: roomsimple
       objectReference: {fileID: 0}
+    - target: {fileID: 1100843519639767357, guid: 09c2649abc9e84043b27b6084d010976,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 2216748641155102896, guid: 09c2649abc9e84043b27b6084d010976,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -168,7 +173,7 @@ PrefabInstance:
     - target: {fileID: 4588688005169998326, guid: 46bbd182b323e1546843e51c44bd18d3,
         type: 3}
       propertyPath: m_RootOrder
-      value: 6
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 4588688005169998326, guid: 46bbd182b323e1546843e51c44bd18d3,
         type: 3}
@@ -367,7 +372,7 @@ PrefabInstance:
     - target: {fileID: 4588688005169998326, guid: 46bbd182b323e1546843e51c44bd18d3,
         type: 3}
       propertyPath: m_RootOrder
-      value: 7
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 4588688005169998326, guid: 46bbd182b323e1546843e51c44bd18d3,
         type: 3}

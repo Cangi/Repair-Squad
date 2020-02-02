@@ -9,6 +9,7 @@ using UnityEngine;
 public class SyncCommands : MonoBehaviour
 {
     public GameObject target;
+    public GameObject plumbTool;
     public underwater underwaterVar;
 
     public void Start()
@@ -29,6 +30,10 @@ public class SyncCommands : MonoBehaviour
         if(target != null)
         {
             target.SetActive(!target.activeSelf);
+            if(plumbTool != null)
+            {
+                plumbTool.SetActive(true);
+            }
             if(underwaterVar != null)
             {
                 underwaterVar.waterRising = true;
