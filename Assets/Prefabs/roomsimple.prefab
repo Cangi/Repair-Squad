@@ -9,6 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2216748641155102896}
+  - component: {fileID: 5254173677666901445}
   m_Layer: 0
   m_Name: roomsimple
   m_TagString: Untagged
@@ -33,6 +34,24 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5254173677666901445
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 530464348120162464}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 753d081be2eb34e4eb9b05c4af5b73c1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  waterHeight: {fileID: 6779462382624025654}
+  playerUnderwaterCamera: {fileID: 0}
+  isUnderwater: 0
+  waterRising: 0
+  waterLevelMax: 1.2
+  risingSpeed: 0.1
 --- !u!65 &931681006802794215
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1681,7 +1700,7 @@ Transform:
   m_LocalScale: {x: 1.16, y: 1, z: 0.72}
   m_Children: []
   m_Father: {fileID: 2216748641155102896}
-  m_RootOrder: 8
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &7801478988761879313
 MeshFilter:
@@ -2664,20 +2683,20 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 6894249174019039535}
     m_Modifications:
-    - target: {fileID: 100004, guid: 5fac94940ccd9394f93ef22b130c54ea, type: 3}
-      propertyPath: m_Name
-      value: Vending paperReduced
-      objectReference: {fileID: 0}
-    - target: {fileID: 100004, guid: 5fac94940ccd9394f93ef22b130c54ea, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 5fac94940ccd9394f93ef22b130c54ea, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 100002, guid: 5fac94940ccd9394f93ef22b130c54ea, type: 3}
       propertyPath: m_StaticEditorFlags
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 100004, guid: 5fac94940ccd9394f93ef22b130c54ea, type: 3}
+      propertyPath: m_Name
+      value: Vending paperReduced
+      objectReference: {fileID: 0}
+    - target: {fileID: 100004, guid: 5fac94940ccd9394f93ef22b130c54ea, type: 3}
+      propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 400004, guid: 5fac94940ccd9394f93ef22b130c54ea, type: 3}
@@ -4297,15 +4316,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 51ed5af58cb3c28468a901798461fc0f, type: 3}
---- !u!1 &931681006121317770 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 134516, guid: 51ed5af58cb3c28468a901798461fc0f,
-    type: 3}
-  m_PrefabInstance: {fileID: 931681006121187582}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &931681006121045398 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 406888, guid: 51ed5af58cb3c28468a901798461fc0f,
+    type: 3}
+  m_PrefabInstance: {fileID: 931681006121187582}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &931681006121317770 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 134516, guid: 51ed5af58cb3c28468a901798461fc0f,
     type: 3}
   m_PrefabInstance: {fileID: 931681006121187582}
   m_PrefabAsset: {fileID: 0}

@@ -9,6 +9,12 @@ using UnityEngine;
 public class SyncCommands : MonoBehaviour
 {
     public GameObject target;
+    public underwater underwaterVar;
+
+    public void Start()
+    {
+        underwaterVar = FindObjectOfType<underwater>();
+    }
 
     public void CallToggleTarget()
     {
@@ -23,6 +29,10 @@ public class SyncCommands : MonoBehaviour
         if(target != null)
         {
             target.SetActive(!target.activeSelf);
+            if(underwaterVar != null)
+            {
+                underwaterVar.waterRising = true;
+            }
         }
     }
     }
